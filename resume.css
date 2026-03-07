@@ -6,53 +6,32 @@ body {
   display: flex;
   flex-direction: column;
   background-color: lightcoral;
-  width: 350px;
+  width: 25%;
   max-height: value;
+  min-width: 260px;
+  max-width: 320px;
 }
 
 .profile-img {
   margin-top: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 300px;
+  width: 80%;
+  max-width: 260px;
   border-radius: 50%;
   align-self: center;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-@media screen and (max-width: 768px) {
-  .profile-container {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .profile-container img {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    object-fit: cover;
-    align-self: center;
-    /* padding: 20px; */
-  }
-}
-/* 
-.wrapper{
-flex-direction:column;
-align-items:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.profile-container{
-width:90%;
+.circle-container {
+  display: flex;
+  justify-content: center;
 }
 
-.main{
-padding:20px;
-} */
 .contact-icons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .side-heading {
@@ -107,42 +86,43 @@ padding:20px;
   background-color: #cfd8dc;
 }
 .main {
+  flex: 1;
+  padding-right: 20px;
   padding-top: 100px;
 }
 
-.edu-details{
+.edu-details {
   display: flex;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
   align-items: center;
   margin: 0;
   font-size: 18px;
   font-family: arial;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
-.edu-mat{
+.edu-mat {
   display: flex;
   margin-bottom: 10px;
   gap: 10px;
   flex-direction: column;
 }
 
-.side-head{
+.side-head {
   font-family: arial;
   font-size: 20px;
-
 }
 
-.edu-wrap{
+.edu-wrap {
   padding: 20px;
 }
 
-.download-btn{
-  position:absolute;
+.download-btn {
+  position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #1E3A8A;
+  background-color: #1e3a8a;
   color: white;
   padding: 10px 18px;
   text-decoration: none;
@@ -151,21 +131,47 @@ padding:20px;
   font-size: 15px;
 }
 
-.download-btn:hover{
-  background-color: #2563EB;
+.download-btn:hover {
+  background-color: #2563eb;
 }
-/* .circle-container{
-    width:200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: white;
-} */
 
-/* .circle-container img{
+.name-mobile {
+  display: none;
+}
 
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-    object-position: center;
-} */
+.name-desktop {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .download-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+  .wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main {
+    padding: 20px;
+    padding-top: 80px;
+  }
+  .profile-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .name-desktop {
+    display: none;
+  }
+
+  .name-mobile {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
